@@ -1,0 +1,1 @@
+ /Users/wf/Documents/projects/flutter/animate_demo1/.dart_tool/flutter_build/7341d7a7edaa116d442965307b14d069/native_assets.yaml: 
