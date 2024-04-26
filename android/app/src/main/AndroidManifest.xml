@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <!--如果不需要获取音频，移除或者注释 READ_MEDIA_AUDIO-->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
     <application
         android:label="animate_demo1"
         android:name="${applicationName}"
