@@ -4,7 +4,8 @@ class TweenAnimationBuilderPage extends StatefulWidget {
   const TweenAnimationBuilderPage({Key? key}) : super(key: key);
 
   @override
-  _TweenAnimationBuilderPageState createState() => _TweenAnimationBuilderPageState();
+  _TweenAnimationBuilderPageState createState() =>
+      _TweenAnimationBuilderPageState();
 }
 
 class _TweenAnimationBuilderPageState extends State<TweenAnimationBuilderPage> {
@@ -23,12 +24,12 @@ class _TweenAnimationBuilderPageState extends State<TweenAnimationBuilderPage> {
             color: Colors.blue,
             child: Center(
                 child: Transform.scale(
-              scale: value,
-              child: Text(
-                'HI',
-                style: TextStyle(fontSize: 100),
-              ),
-            )),
+                  scale: value,
+                  child: Text(
+                    'HI',
+                    style: TextStyle(fontSize: 100),
+                  ),
+                )),
           );
         });
   }
@@ -39,6 +40,14 @@ class _TweenAnimationBuilderPageState extends State<TweenAnimationBuilderPage> {
         duration: Duration(
           seconds: 2,
         ),
+        child: Center(
+          child: Transform.scale(
+            scale: 1,
+            child: const Text(
+              'HI',
+              style: TextStyle(fontSize: 100),
+            ),
+          ),),
         builder: (context, value, child) {
           return Opacity(
             opacity: value,
@@ -47,14 +56,7 @@ class _TweenAnimationBuilderPageState extends State<TweenAnimationBuilderPage> {
               width: 300,
               height: 300,
               color: Colors.blue,
-              child: Center(
-                  child: Transform.scale(
-                    scale: 1,
-                    child: Text(
-                      'HI',
-                      style: TextStyle(fontSize: 100),
-                    ),
-                  )),
+              child: child,
             ),
           );
         });
@@ -62,15 +64,16 @@ class _TweenAnimationBuilderPageState extends State<TweenAnimationBuilderPage> {
 
 
   var _big = false;
+
   _buildMain3() {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         setState(() {
           _big = !_big;
         });
       },
       child: TweenAnimationBuilder(
-          tween: Tween<double>(end: _big ? 72  : 172),
+          tween: Tween<double>(end: _big ? 72 : 172),
           duration: Duration(
             seconds: 2,
           ),

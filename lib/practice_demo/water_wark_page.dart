@@ -15,18 +15,16 @@ class _WaterMarkPageState extends State<WaterMarkPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("data"),
+        title: const Text("data"),
       ),
-      body: Container(
-        child: Center(
-          child: SizedBox(
-            width: 200,
-            height: 300,
-            child: WaterMark(
-              child: Container(
-                color: Colors.orange,
-              ),
-              text: "WSBT",
+      body: Center(
+        child: SizedBox(
+          width: 200,
+          height: 300,
+          child: WaterMark(
+            text: "WSBT",
+            child: Container(
+              color: Colors.orange,
             ),
           ),
         ),
